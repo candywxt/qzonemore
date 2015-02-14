@@ -1,0 +1,23 @@
+{
+  "name": "Qzone",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "Qzone more",
+  "icons": {
+    "128": "owl.png",
+    "16": "owl.png",
+    "32": "owl.png"
+  },
+  "background": {
+    "scripts": []
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://user.qzone.qq.com/*"],
+      "js": ["index.js"],
+      "css": ["index.css"]
+    }
+  ],
+  "permissions": ["webRequest"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
